@@ -8,7 +8,7 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
-    <script>
+<!--     <script>
     window.onload = function() {
         AFRAME.registerComponent('videohandler', {
             init: function () {
@@ -27,7 +27,7 @@
             }
         });
     };
-</script>
+</script> -->
     
     <!-- style for the loader -->
     <style>
@@ -53,7 +53,6 @@
   </head>
   
   <body style="margin : 0px; overflow: hidden;">
-    <!-- minimal loader shown until image descriptors are loaded. Loading may take a while according to the device computational power -->
     <div class="arjs-loader">
       <div>Loading, please wait...</div>
     </div>
@@ -75,7 +74,6 @@
         </a-assets>
       
       <a-nft
-        videohandler
         type="nft"
         url="https://doylej11.github.io/AnniversaryHunt/ann pic 1300"
         smooth="true"
@@ -84,7 +82,7 @@
         smoothThreshold="5">
           <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
         
-        <a-video
+<!--         <a-video
                 src="#vid"
                 position='50 150 -100'
                 rotation='90 0 180'
@@ -92,13 +90,13 @@
                 height='175'
                 >
             </a-video>
-        
-<!--           <a-entity
+         -->
+          <a-entity
           gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
               scale="5 5 5"
               position="100 100 0"
           >
-          </a-entity> -->
+          </a-entity>
       </a-nft>
       <!-- static camera that moves according to the device movemenents -->
       <a-entity camera></a-entity>
