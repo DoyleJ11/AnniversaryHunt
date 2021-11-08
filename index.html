@@ -54,25 +54,6 @@
         });
     };
 	   
-    window.onload = function() {
-        AFRAME.registerComponent('videohandler2', {
-            init: function () {
-                var marker = this.el;
-
-                this.vid = document.querySelector("#vid2");
-
-                marker.addEventListener('markerFound', function () {
-                    this.vid.play();
-                }.bind(this));
-
-		marker.addEventListener('markerLost', function() {
-			this.vid.pause();
-			this.vid.currentTime = 0;
-		}.bind(this));
-            }
-        });
-    };  
-	   
 </script> 
     
     <!-- style for the loader -->
@@ -154,50 +135,7 @@
         
               </script>
       </a-nft>
-	    <!--Second Marker --> 
-	    <a-assets>
-            <video src="sample-5s.mp4"
-                preload="auto" id="vid2" response-type="arraybuffer" loop
-                crossorigin webkit-playsinline autoplay muted playsinline>
-            </video>
-        </a-assets>
 	    
-    <a-nft
-	videohandler2
-        type="nft"
-        url="https://doylej11.github.io/AnniversaryHunt/ann pic 2300"
-        smooth="true"
-        smoothCount="10"
-        smoothTolerance=".01"
-        smoothThreshold="5">
-        
-        <a-video
-                src="#vid2"
-                rotation='90 0 180'
-                width='250'
-                height='125'
-                >
-            </a-video>
-	    
-	     <script>
-                document.getElementById("btn1").addEventListener("click", (e)=> {
-                var v = document.querySelector('#vid2').muted=false;
-                })
-        
-                document.getElementById("btn2").addEventListener("click", (e)=> {
-                var v = document.querySelector('#vid2').muted=true;
-                })
-        
-                document.getElementById("btn3").addEventListener("click", (e)=> {
-                var v = document.querySelector('#vid2').pause();
-                })
-                document.getElementById("btn4").addEventListener("click", (e)=> {
-                var v = document.querySelector('#vid2').play();
-                })
-        
-              </script>
-	    
-      </a-nft>
       <!-- static camera that moves according to the device movemenents -->
       <a-entity camera></a-entity>
     </a-scene>
