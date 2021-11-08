@@ -53,6 +53,26 @@
             }
         });
     };
+	   
+    window.onload = function() {
+        AFRAME.registerComponent('videohandler2', {
+            init: function () {
+                var marker = this.el;
+
+                this.vid = document.querySelector("#vid2");
+
+                marker.addEventListener('markerFound', function () {
+                    this.vid.play();
+                }.bind(this));
+
+		marker.addEventListener('markerLost', function() {
+			this.vid.pause();
+			this.vid.currentTime = 0;
+		}.bind(this));
+            }
+        });
+    };  
+	   
 </script> 
     
     <!-- style for the loader -->
@@ -143,7 +163,7 @@
         </a-assets>
 	    
     <a-nft
-	videohandler
+	videohandler2
         type="nft"
         url="https://doylej11.github.io/AnniversaryHunt/ann pic 2300"
         smooth="true"
