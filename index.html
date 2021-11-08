@@ -8,6 +8,32 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
+	  <style>
+	  .button {
+		background-color: #4CAF50;
+		border: none;
+		color: white;
+		padding: 7px;
+		text-align: center;
+		text-decoration: none;
+		display: inline-block;
+		font-size: 12px;
+		margin: 4px 2px;
+		cursor: pointer;
+		border-radius: 12px;
+		border: 2px solid rgba(9, 148, 28, 0.541);
+		box-shadow: o 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+		  }
+		  
+	  </style>
+	  
+<div style='position: fixed; top: 10px; width: 100%; text-align: center; z-index: 1;'>
+    <button class="button" id="btn1">Play Sound</button>
+    <button class="button" id="btn2">Mute</button>
+    <button class="button" id="btn3">Stop video</button>
+    <button class="button" id="btn4">Play Video</button>
+	  </div>
+	  
    <script>
     window.onload = function() {
         AFRAME.registerComponent('videohandler', {
@@ -90,6 +116,23 @@
                 height='125'
                 >
             </a-video>
+            <script>
+                document.getElementById("btn1").addEventListener("click", (e)=> {
+                var v = document.querySelector('#vid').muted=false;
+                })
+        
+                document.getElementById("btn2").addEventListener("click", (e)=> {
+                var v = document.querySelector('#vid').muted=true;
+                })
+        
+                document.getElementById("btn3").addEventListener("click", (e)=> {
+                var v = document.querySelector('#vid').pause();
+                })
+                document.getElementById("btn4").addEventListener("click", (e)=> {
+                var v = document.querySelector('#vid').play();
+                })
+        
+              </script>
       </a-nft>
       <!-- static camera that moves according to the device movemenents -->
       <a-entity camera></a-entity>
