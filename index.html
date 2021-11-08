@@ -135,6 +135,13 @@
               </script>
       </a-nft>
 	    <!--Second Marker --> 
+	    <a-assets>
+            <video src="cutevid.mp4"
+                preload="auto" id="vid2" response-type="arraybuffer" loop
+                crossorigin webkit-playsinline autoplay muted playsinline>
+            </video>
+        </a-assets>
+	    
     <a-nft
 	videohandler
         type="nft"
@@ -145,7 +152,7 @@
         smoothThreshold="5">
         
         <a-video
-                src="#vid"
+                src="#vid2"
                 rotation='90 0 180'
                 width='250'
                 height='125'
