@@ -24,7 +24,6 @@
 		border: 2px solid rgba(9, 148, 28, 0.541);
 		box-shadow: o 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 		  }
-		  
 	  </style>
 	  
 <div style='position: fixed; top: 10px; width: 100%; text-align: center; z-index: 1;'>
@@ -57,7 +56,23 @@
 	   
 </script> 
     
-    <!-- style for the loader -->
+	  
+	   <!-- style for the footer-->
+<style>
+	.footer-card {
+ 	   position: fixed; //fixed is absolute to a browser
+  	  bottom: 0;
+ 	   left: 0;
+ 	   right: 0;
+ 	   background: rgba(0, 0, 0, 0.5);
+  	  color: white;
+	}		
+</style>
+  
+	  
+   
+	  
+	   <!-- style for the loader -->
     <style>
       .arjs-loader {
         height: 100%;
@@ -140,5 +155,10 @@
       <!-- static camera that moves according to the device movemenents -->
       <a-entity camera></a-entity>
     </a-scene>
+	  
+<div class="footer-card">
+    <h1>Next Location: Battlepoint Park!</h1>
+</div>
+	  
   </body>
 </html>
